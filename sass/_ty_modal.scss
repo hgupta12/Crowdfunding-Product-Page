@@ -1,0 +1,40 @@
+.ty_modal{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115rem;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.2);
+    @include breakpoint-down(medium){
+        height: 158rem;
+    }
+    &_content{
+        position: relative;
+        top: 14rem;
+        z-index: 5;
+        width: 400px;
+        text-align: center;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: $white;
+    border-radius: 10px;
+    transition: 0.4s;
+    img{
+        margin-bottom: 1.5rem;
+    }
+    h3{
+        margin-bottom: 1rem;
+    }
+    p{
+        line-height: 1.8;
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+    }
+    .btn{
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+    }
+}

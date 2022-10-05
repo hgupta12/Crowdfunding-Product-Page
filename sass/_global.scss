@@ -1,0 +1,43 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+        scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Commissioner', sans-serif;
+    background-color: $darkGray;
+}
+h1,h2,h3{
+    color: $black;
+}
+p{
+    color: $darkGrayP;
+}
+
+.btn{
+    border: none;
+    background-color: $moderateCyan;
+    color: $white;
+    font-size: 0.875rem;
+    border-radius: 50px;
+    padding: 1rem 2.5rem;
+    transition: 0.4s;
+    cursor: pointer;
+    &:hover{
+        background: $darkCyan;
+    }
+}
+.container{
+    margin: 0 auto;
+    @include breakpoint-down(small){
+        width: 90%;
+    }
+}
+.abs_center{
+    left: 50%;
+    transform: translateX(-50%);
+}

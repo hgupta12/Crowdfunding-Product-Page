@@ -1,0 +1,146 @@
+.modal{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115rem;
+    z-index: 4;
+    background-color: rgba(0,0,0,0.2);
+    @include breakpoint-down(medium){
+        height: 158rem;
+    }
+    &__content{
+    
+        position: relative;
+        top: 10rem;
+        z-index: 4;
+        width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: $white;
+    border-radius: 10px;
+    transition: 0.4s;
+    h3{
+        transition: 0.2s;
+        &:hover{
+            cursor: pointer;
+            color: $moderateCyan;
+        }
+    }
+    & svg{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        &:hover{
+            path{
+                fill: $black;
+                opacity: 1;
+            }
+        }
+    }
+    }
+
+    p{
+         line-height: 1.5rem;
+            font-size: 0.9375rem;
+            margin-bottom: 1rem;
+            @include breakpoint-up(medium){
+                font-size: 0.82rem;
+            }
+    }
+    .pledge{
+        margin-bottom: 2rem;
+        position: relative;
+        padding-left: 2.5rem;
+        
+           
+            input[type="radio"]{
+                position: relative;
+                left: -1.5rem;
+                top: 1.25rem;
+            }
+        
+        &__title{
+            justify-content: flex-start;
+            gap: 1.5rem;
+            font-weight: 700;
+        }
+        &__selected{
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: 5fr 1fr;
+        @include breakpoint-down(medium){
+            grid-template-columns: 1fr;
+            gap: 1rem;
+
+        }
+        &::after{
+            content: '$';
+            position: absolute;
+            bottom: 2.5rem;
+            font-size: 1.125rem;
+            color: $darkGrayP;
+            @include breakpoint-up(large){
+                right: 12rem;
+            }
+        }
+        &::before{
+                content: '';
+                position: absolute;
+            
+                width: 100%;
+                height: 1px;
+                left: 0;
+                background-color: $darkGray;
+                color: $darkGray;
+                @include breakpoint-up(large){
+                    transform: translateY(-0.5rem);
+                }
+            }
+        p{
+            margin-bottom: 0;
+            @include breakpoint-down(medium){
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+        & >div{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: end;
+            align-items: center;
+            gap: 1rem;
+            @include breakpoint-down(medium){
+                transform: translateX(-1rem);
+            }
+            
+            input{
+            
+                width: 6rem;
+                font-size: 1.25rem;
+                padding: 0.75rem 2rem;
+                border-radius: 50px;
+                border: none;
+                border: 2px solid $darkGray;
+                outline: none;
+                position: relative;
+                @include breakpoint-down(medium){
+                    width:100%;
+                } 
+                @include breakpoint-up(large){
+                    padding: 0.75rem 1.5rem;
+                }
+            }
+            & .btn{
+               
+                padding: 1rem 1.25rem;
+
+                font-size: 0.75rem;
+            }
+        }
+        }
+    }
+}
